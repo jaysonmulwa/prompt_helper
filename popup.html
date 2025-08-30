@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Prompt Helper</title>
+        
+        <style>
+            body {
+                width: 500px;
+                min-height: 150px;
+                font-family: 'Inter', sans-serif;
+                color: #333;
+            }
+            .popup {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 1000;
+                padding: 20px;
+                border-radius: 5px;
+                background-color: #fff;
+            }
+            .prompt {
+                margin-bottom: 10px;
+                padding: 8px;
+                border-radius: 4px;
+                position: relative;
+                white-space: pre-wrap;
+            }
+
+            .prompt-text {
+                 font-family: "Source Code Pro", monospace;
+            }
+
+            .copy-btn {
+                font-size: 12px;
+                padding: 2px 6px;
+                cursor: pointer;
+                border-radius: 3px;
+                color: #fff;
+            }
+            .copy-btn:hover {
+                background-color: #007bff;
+                color: #fff;
+            }
+        </style>
+        
+        <!-- tw styling -->
+        <link href="./output.css" rel="stylesheet">
+        
+        <!-- Add Roboto font from Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?Fira+Code:wght@300..700&family=Oswald:wght@200..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    </head>
+    <body class="p-4 text-gray-100 bg-zinc-800">
+
+        <h3 class="mb-4 text-2xl font-bold text-gray-100">Prompt Helper</h3>
+
+        <h4 class="text-gray-100">Generic template</h4>
+        <div id="prompts" class="mb-4">
+            <ul class="mt-4 space-y-2">
+            <a href="#" class="block h-full rounded-lg border border-gray-700 p-4 hover:border-pink-600 prompt-text">
+                <p class="mt-1 text-xs font-medium text-gray-300">
+                    Persona: ... <br/>
+                    Task: ... <br/>
+                    Context: ... <br/>
+                    Format: ... <br/>
+                </p>
+            </a>
+            </ul>
+        </div>
+
+        <h4 class="text-gray-100">Prompt Examples</h4>
+        <div id="prompt examples" class="mb-4">
+            <ul class="mt-4 space-y-2">
+                <li class="">
+                    <a href="#" class="block h-full rounded-lg border border-gray-700 p-4 hover:border-pink-600 prompt-text">
+                        <strong class="font-medium text-white">Create a Dockerfile</strong>
+                        <p class="mt-1 text-xs font-medium text-gray-300">
+                            Persona: DevOps Engineer <br/>
+                            Task: Create a Dockerfile for a Node.js application <br/>
+                            Context: The Node.js app uses Express.js and MongoDB as the backend, and it needs to be deployed on AWS EC2 <br/>
+                            Format: In code blocks, with appropriate comments for each section of the Dockerfile <br/>
+                
+                        </p>
+                    </a>
+                </li>
+
+                <li class="">
+                    <a href="#" class="block h-full rounded-lg border border-gray-700 p-4 hover:border-blue-600 prompt-text">
+                        <strong class="font-medium text-white">Design a Marketing Strategy</strong>
+                        <p class="mt-1 text-xs font-medium text-gray-300">
+                            Persona: Marketing Manager <br/>
+                            Task: Design a comprehensive marketing strategy for a new product launch <br/>
+                            Context: The product is a mobile app targeted at young professionals and the launch will be on social media and email campaigns <br/>
+                            Format: In bullet points, with key performance indicators (KPIs) and a timeline for execution <br/>
+                        </p>
+                    </a>
+                </li>
+
+                <li class="">
+                    <a href="#" class="block h-full rounded-lg border border-gray-700 p-4 hover:border-green-600 prompt-text">
+                        <strong class="font-medium text-white">Improve Customer Support Process</strong>
+                        <p class="mt-1 text-xs font-medium text-gray-300">
+                            Persona: Customer Support Lead <br/>
+                            Task: Improve the existing customer support ticketing process to reduce response time <br/>
+                            Context: The team is currently handling an average of 300 tickets per day with a response time of 24 hours <br/>
+                            Format: In step-by-step process flow, with suggestions for tools, team organization, and KPIs for improvement <br/>
+                        </p>
+                    </a>
+                </li>
+
+                <li class="">
+                    <a href="#" class="block h-full rounded-lg border border-gray-700 p-4 hover:border-yellow-600 prompt-text">
+                        <strong class="font-medium text-white">Enhance Sales Forecasting Accuracy</strong>
+                        <p class="mt-1 text-xs font-medium text-gray-300">
+                            Persona: Sales Analyst <br/>
+                            Task: Enhance the accuracy of the sales forecasting model used by the team <br/>
+                            Context: The model currently uses historical data but needs to incorporate external factors like market trends and seasonality <br/>
+                            Format: In prose, with steps for improving the model, incorporating new data sources, and testing accuracy <br/>
+                        </p>
+                    </a>
+                </li>
+
+                <li class="">
+                    <a href="#" class="block h-full rounded-lg border border-gray-700 p-4 hover:border-red-600 prompt-text">
+                        <strong class="font-medium text-white">Create a Financial Report</strong>
+                        <p class="mt-1 text-xs font-medium text-gray-300">
+                            Persona: Financial Analyst <br/>
+                            Task: Create a detailed financial report for the quarter, including profit and loss, balance sheet, and cash flow analysis <br/>
+                            Context: The report is for the company’s executive team and needs to be ready for the next board meeting <br/>
+                            Format: In structured sections with data visualizations (charts and graphs) and a summary of financial health <br/>
+                        </p>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+        <script src="popup.js"></script>
+    </body>
+</html>
